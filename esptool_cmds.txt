@@ -1,0 +1,11 @@
+Clone an ESP32-8MB (ESP32-D0WD-V3)
+ ./esptool --port /dev/cu.usbserial-0001 --baud 230400 --chip esp32 read_flash 0 0x800000 node32-2.bin
+ 
+ alt:
+ ./esptool --port /dev/cu.usbserial-0001 --baud 230400 --chip esp32 --flash_mode dio --flash_freq 80m --flash_size detect read_flash 0 0x800000 node32.bin
+ 
+
+Write the bin out
+ ./esptool --port /dev/cu.usbserial-0001 --baud 921600  write_flash 0 node32.bin
+ 
+ 
